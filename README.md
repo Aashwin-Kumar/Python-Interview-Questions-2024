@@ -338,4 +338,114 @@ modifications to the elements within nested objects (like shallow_copy[1][0]) im
 
 <hr style="border: 1px solid gray; margin: 10px 0;">
 
+Q. 12 What is the difference between deep copy and shallow copy in Python?
+
+  
+<details>
+<summary>Click to reveal the answer</summary>
+
+Answer:
+
+In Python, a shallow copy creates a new object but does not create copies of nested objects. It references the nested objects. 
+On the other hand, a deep copy creates a new object and recursively creates copies of all nested objects, ensuring complete independence from the original object.
+
+</details>
+
+<hr style="border: 1px solid gray; margin: 10px 0;">
+
+Q. 13 Explain the use of decorators in Python
+
+  
+<details>
+<summary>Click to reveal the answer</summary>
+
+Answer:
+
+Decorators are a powerful feature in Python that allows you to modify or extend the behavior of functions or methods. 
+They are defined using the @decorator syntax. Here's an example:
+
+```python
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+```
+
+</details>
+
+<hr style="border: 1px solid gray; margin: 10px 0;">
+
+Q. 14 What is the Global Keyword in Python?
+
+  
+<details>
+<summary>Click to reveal the answer</summary>
+
+Answer:
+
+The global keyword in Python is used to indicate that a variable is a global variable, not a local one. 
+When you want to modify a global variable within a function, you need to use the global keyword to declare it.
+
+```python
+x = 10
+
+def modify_global():
+    global x
+    x += 5
+
+modify_global()
+print(x)  # Output: 15
+```
+
+</details>
+
+<hr style="border: 1px solid gray; margin: 10px 0;">
+
+Q. 15 What is lambda in Python? Why is it used?
+
+  
+<details>
+<summary>Click to reveal the answer</summary>
+
+Answer:
+
+In Python, a lambda function is a small, anonymous function defined using the lambda keyword. 
+Lambda functions are also known as anonymous functions or lambda expressions. T
+hey are used for creating small, one-time-use functions without the need for a full function definition using the def keyword.
+
+The general syntax of a lambda function is:
+
+```python
+lambda arguments: expression
+```
+Lambda functions can have any number of input parameters, but they can only have one expression. 
+The result of the expression is implicitly returned from the lambda function.
+
+Here's an example to illustrate the use of lambda functions:
+
+```python
+# Regular function definition
+def square(x):
+    return x**2
+
+print(square(5))  # Output: 25
+
+# Equivalent lambda function
+square_lambda = lambda x: x**2
+
+print(square_lambda(5))  # Output: 25
+```
+
+</details>
+
+<hr style="border: 1px solid gray; margin: 10px 0;">
+
 
